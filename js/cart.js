@@ -31,15 +31,14 @@ function displayCartItems(cartItems){
             </td>
             <td>
                 ${product.product_name}
-                <br>
-                <span class="badge badge-ghost badge-sm">${product.product_price}$</span>
             </td>
             <td class="text-center">
-                ${product.product_quantity}
+                <input class="bg-base-300 rounded w-10 p-1 font-medium text-center" type="number" value="${product.product_quantity}" disabled>
             </td>
-            <th>
-                <button class="btn btn-ghost btn-xs">Remove</button>
-            </th>
+            <td>
+                <span class="badge badge-ghost badge-sm text-center">${product.product_price}$</span>
+            </td>
+            
         </tr>
         `;
         tableBody.appendChild(tr);
@@ -76,4 +75,8 @@ function addToCart(element) {
 
     // adding products as cartItem
     displayCartItems(cartArray);
+
+    if(cartArray.length >= 1){
+        document.getElementById("t-foot").style.visibility = "visible";
+    }
 }

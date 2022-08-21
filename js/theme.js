@@ -6,3 +6,6 @@ document.getElementById("change-theme-btn").addEventListener('click', ()=>{
     }
     htmlElement.setAttribute("data-theme", "dark");
 })
+
+const tFoot = document.getElementById("t-foot");
+tFoot.style.visibility = "hidden";
