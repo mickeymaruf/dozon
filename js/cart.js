@@ -34,16 +34,8 @@ function displayCartItems(cartItems){
                 <br>
                 <span class="badge badge-ghost badge-sm">${product.product_price}$</span>
             </td>
-            <td>
-                <div class="flex items-center justify-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                    </svg>
-                    <input class="bg-base-600 rounded w-10 p-1 font-medium text-center" type="number" value="${product.product_quantity}" disabled>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                </div>
+            <td class="text-center">
+                ${product.product_quantity}
             </td>
             <th>
                 <button class="btn btn-ghost btn-xs">Remove</button>
