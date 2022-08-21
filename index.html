@@ -17,7 +17,7 @@
     <header>
         <nav>
             <!-- navbar -->
-            <div class="navbar bg-base-100 px-8">
+            <div class="navbar bg-base-100 px-4 sm:px-8">
                 <div class="flex-1">
                   <a class="normal-case text-xl">Dozon</a>
                 </div>
@@ -51,10 +51,10 @@
             <!-- navbar -->
         </nav>
     </header>
-    <main class="w-4/5 mx-auto">
-      <section class="grid grid-cols-2 items-start gap-8 mt-5">
+    <main class="w-11/12 sm:w-4/5 mx-auto">
+      <section class="grid lg:grid-cols-2 items-start gap-8 mt-5 pb-5">
         <!-- products -->
-        <div id="products" class="grid grid-cols-2 gap-3">
+        <div id="products" class="grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 order-last lg:order-first gap-3">
 
           <!-- product -->
           <div class="card w-full bg-base-100 shadow-xl">
@@ -116,7 +116,7 @@
         <!-- products end -->
         <!-- cart -->
         <div>
-          <div class="overflow-x-auto w-full">
+          <div class="overflow-x-hidden w-full">
             <table class="table w-full">
               <!-- head -->
               <thead>
