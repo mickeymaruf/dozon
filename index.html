@@ -11,6 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- js -->
     <script src="./js/theme.js" defer></script>
+    <script src="./js/products.js" defer></script>
     <script src="./js/cart.js" defer></script>
 </head>
 <body>
@@ -54,28 +55,13 @@
     <main class="w-11/12 sm:w-4/5 mx-auto">
       <section class="grid lg:grid-cols-2 items-start gap-8 mt-5 pb-5">
         <!-- products -->
-        <div id="products" class="grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 order-last lg:order-first gap-3">
+        <div id="products-container" class="grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 order-last lg:order-first gap-3">
 
           <!-- product -->
-          <div class="card w-full bg-base-100 shadow-xl">
-            <figure><img class="w-full" src="./images/shoes.jpg" alt="Shoes" /></figure>
-            <div class="card-body p-5">
-              <h2 class="card-title flex">
-                <span>
-                  <span>Shoes</span>
-                  <div class="badge badge-secondary">NEW</div>
-                </span>
-              </h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end flex items-center">
-                <p class="text-xl font-medium text-white"><span>999</span>$</p>
-                <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
-              </div>
-            </div>
-          </div>
+          
           <!--  -->
           <!-- product -->
-          <div class="card w-full bg-base-100 shadow-xl">
+          <!-- <div class="card w-full bg-base-100 shadow-xl">
             <figure><img class="w-full" src="./images/phone.webp" alt="Phone" /></figure>
             <div class="card-body p-5">
               <h2 class="card-title flex">
@@ -90,10 +76,10 @@
                 <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
               </div>
             </div>
-          </div>
+          </div> -->
           <!--  -->
           <!-- product -->
-          <div class="card w-full bg-base-100 shadow-xl">
+          <!-- <div class="card w-full bg-base-100 shadow-xl">
             <figure><img class="w-full" src="./images/watch.png" alt="Watch" /></figure>
             <div class="card-body p-5">
               <h2 class="card-title flex">
@@ -108,7 +94,7 @@
                 <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
               </div>
             </div>
-          </div>
+          </div> -->
           <!--  -->
           
 

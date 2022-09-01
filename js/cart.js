@@ -50,6 +50,12 @@ function displayCartItems(cartItems){
         totalPrice += product.product_price * product.product_quantity;
         document.getElementById("total-price").innerText = totalPrice;
     }
+
+    window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: "smooth"
+    });
 }
 
 function addToCart(element) {
