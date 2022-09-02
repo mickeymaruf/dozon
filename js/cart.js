@@ -37,8 +37,8 @@ function displayCartItems(cartItems){
             </td>
             <td>
                 <span class="badge badge-ghost badge-sm text-center">${product.product_price}$</span>
+                <span id="remove-cartItem" class="ml-5 cursor-pointer">❌</span>
             </td>
-            
         </tr>
         `;
         tableBody.appendChild(tr);
@@ -86,3 +86,12 @@ function addToCart(element) {
         document.getElementById("t-foot").style.visibility = "visible";
     }
 }
+
+
+// remove product added but not working
+document.getElementById("cart-products").addEventListener('click', (e)=>{
+    if(e.target.id === "remove-cartItem"){
+        const tr = e.target.parentNode.parentNode;
+        tr.parentNode.removeChild(tr);
+    }
+})

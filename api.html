@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dozon - E-Shopping</title>
-    <!-- daisyUI -->
+    <title>Shopping with API</title>
+
+    <!-- daisyUI-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- js -->
-    <script src="./js/theme.js" defer></script>
-    <script src="./js/products.js" defer></script>
-    <script src="./js/cart.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -23,9 +21,9 @@
                   <a href="./index.html" class="normal-case text-xl font-medium btn btn-ghost">Dozon</a>
                 </div>
                 <div class="flex-none">
-                  <ul class="menu menu-horizontal p-0 mr-3">
-                    <li><a href="./api.html">API</a></li>
-                  </ul>
+                    <ul class="menu menu-horizontal p-0 mr-3">
+                        <li><a href="./api.html">API</a></li>
+                    </ul>
                   <!-- theme switch -->
                   <div class="dropdown dropdown-end">
                     <label class="swap swap-rotate">
@@ -54,47 +52,66 @@
               </div>
             <!-- navbar -->
         </nav>
+        <div class="w-10/12 mx-auto pb-5 flex flex-col lg:flex-row items-center justify-between">
+            <ul id="category" class="tabs tabs-boxed w-fit">
+                <li class="tab tab-lg tab-active"><a href="./api.html">All</a></li>
+            </ul>
+            <div class="form-control w-full max-w-xs">
+                <label class="label">
+                    <span class="label-text">Search your product</span>
+                    <span class="label-text-alt">press <kbd class="kbd kbd-sm">enter</kbd></span>
+                </label>
+                <input id="search-input" type="text" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
+            </div>
+        </div>
     </header>
-    <main class="w-11/12 sm:w-4/5 mx-auto">
-      <section class="grid lg:grid-cols-2 items-start gap-8 mt-5 pb-5">
-        <!-- products -->
-        <div id="products-container" class="grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 order-last lg:order-first gap-3">
-          <!-- product-card -->
-          
-          <!-- product-card -->
-        </div>
-        <!-- products end -->
-        <!-- cart -->
+    <main>
+        <section class="w-10/12 mx-auto my-5 ">
+            
+            <!--  -->
+            <div id="nothing-found" class="alert shadow-lg hidden">
+                <p class="text-sm">No such products by this name...</p>
+            </div>
+            <!--  -->
+            
+            <div id="products-container" class="grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 order-last lg:order-first gap-10">
+
+            </div>
+
+            <!-- cart -->
         <div>
-          <div class="overflow-x-hidden w-full">
-            <table class="table w-full">
-              <!-- head -->
-              <thead>
-                <tr>
-                  <th>Image</th>
-                  <th>Product</th>
-                  <th class="text-center">Quantity</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody id="cart-products">
-
-              </tbody>
-              <!-- foot -->
-              <tfoot id="t-foot">
-                <tr>
-                  <th>Total</th>
-                  <th></th>
-                  <th></th>
-                  <th class="text-lg">$<span id="total-price">0</span></th>
-                </tr>
-              </tfoot>
-            </table>
+            <div class="overflow-x-hidden w-full">
+              <table class="table w-full">
+                <!-- head -->
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th class="text-center">Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody id="cart-products">
+  
+                </tbody>
+                <!-- foot -->
+                <tfoot id="t-foot">
+                  <tr>
+                    <th>Total</th>
+                    <th></th>
+                    <th></th>
+                    <th class="text-lg">$<span id="total-price">0</span></th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+  
           </div>
-
-        </div>
-        <!-- cart end -->
-      </section>
+          <!-- cart end -->
+        </section>
     </main>
+    <script src="./js/theme.js"></script>
+    <script src="./js/fakestore-api.js"></script>
 </body>
+
 </html>
