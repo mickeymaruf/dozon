@@ -1,6 +1,8 @@
 const warningMsg = document.getElementById("nothing-found");
+const spinner = document.getElementById("spinner");
 
 const loadProduct = async () => {
+    spinner.classList.remove("hidden");
     const res = await fetch('https://fakestoreapi.com/products');
     const data = await res.json();
     return data;
@@ -28,6 +30,7 @@ const showProduct = (products) => {
         `;
         productsContainer.appendChild(card);
     })
+    spinner.classList.add("hidden");
 }
 
 const showData = async () => {
@@ -77,13 +80,7 @@ document.getElementById("search-input").addEventListener("keyup", async (e)=>{
     if(e.key === "Enter"){
         const search = e.target.value;
         e.target.value = "";
-        const searchResultProducts = [];
-
-        products.forEach(product => {
-            if(product.title.toLowerCase().includes(search.toLowerCase())){
-                searchResultProducts.push(product);
-            }
-        })
+        const searchResultProducts = products.filter(product => product.title.toLowerCase().includes(search.toLowerCase()) || product.category.toLowerCase().includes(search.toLowerCase()))
 
         searchResultProducts.length > 0 ? warningMsg.classList.add("hidden") : warningMsg.classList.remove("hidden");
 

@@ -52,7 +52,7 @@
               </div>
             <!-- navbar -->
         </nav>
-        <div class="w-10/12 mx-auto pb-5 flex flex-col lg:flex-row items-center justify-between">
+        <div class="w-10/12 mx-auto flex flex-col lg:flex-row items-center justify-between">
             <ul id="category" class="tabs tabs-boxed w-fit">
                 <li class="tab tab-lg tab-active"><a href="./api.html">All</a></li>
             </ul>
@@ -64,10 +64,15 @@
                 <input id="search-input" type="text" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
             </div>
         </div>
+        <!-- spinner -->
+        <div id="spinner" class="w-10/12 mx-auto hidden">
+          <progress class="progress"></progress>
+        </div>
+        <!-- spinner -->
+        
     </header>
     <main>
         <section class="w-10/12 mx-auto my-5 ">
-            
             <!--  -->
             <div id="nothing-found" class="alert shadow-lg hidden">
                 <p class="text-sm">No such products by this name...</p>
@@ -77,37 +82,6 @@
             <div id="products-container" class="grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 order-last lg:order-first gap-10">
 
             </div>
-
-            <!-- cart -->
-        <div>
-            <div class="overflow-x-hidden w-full">
-              <table class="table w-full">
-                <!-- head -->
-                <thead>
-                  <tr>
-                    <th>Image</th>
-                    <th>Product</th>
-                    <th class="text-center">Quantity</th>
-                    <th>Price</th>
-                  </tr>
-                </thead>
-                <tbody id="cart-products">
-  
-                </tbody>
-                <!-- foot -->
-                <tfoot id="t-foot">
-                  <tr>
-                    <th>Total</th>
-                    <th></th>
-                    <th></th>
-                    <th class="text-lg">$<span id="total-price">0</span></th>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-  
-          </div>
-          <!-- cart end -->
         </section>
     </main>
     <script src="./js/theme.js"></script>
